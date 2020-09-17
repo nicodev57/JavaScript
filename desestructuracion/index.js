@@ -57,4 +57,44 @@ console.log(name); // Nicolás
 console.log(last); // Valencia
 
 
+//-----------------------------------
+//----------------
+// --------------- Video 2 youtube 
+
+const usuario = {
+    nombre: 'Nicolás',
+    apellido: 'Valencia',
+    edad: 18,
+    pais: 'Colombia',
+    profesion: 'Desarrollador'
+}
+// en caso de no definir correo podemos darle un valor predeterminado:
+const {nombre, profesion, correo = 'No especificado'} = usuario; // aquí le decimos que queremos acceder al nombre y al correo de usuario.
+
+//console.log(usuario.pais);
+// aquí ya podemos ingresar directamente a las propiedades: 
+console.log(nombre);
+console.log(profesion);
+console.log(correo);
+// output 
+//nicolas
+// desarrollador
+// no especificado
+
+
+
+// ------------- Desestructurando el objeto dentro de una función
+
+// const mostrarInfo = ({nombre, profesion = 'ingeniero'}) -> podemos poner valores por defecto 
+const mostrarInfo = ({nombre, profesion}) => console.log(`${nombre} es ${profesion}`);
+
+
+mostrarInfo(usuario); 
+// output Nicolás es Desarrollador
+
+
+
+
+
+
 
