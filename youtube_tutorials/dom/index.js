@@ -44,6 +44,7 @@
 
 //padre.appendChild(listItem); // agregamos el nuevo elemento (li) al elemento con el nombre padre.
 // aca se agrega el elemento al final de la lista
+
 // --- con byTagName
 
 //let padre = document.getElementsByTagName('li'); // cogemos todos los li
@@ -71,7 +72,7 @@
 
 // --- Modificando, Remplazando y Eliminando Nodos del DOM
 
-// -- Acceder a un elemento y al texto
+// -- Acceder a un elemento y cambiar el texto
 //let primerElemento = document.getElementsByTagName('li')[0];
 // 1. opción
 //primerElemento.innerHTML = 'Soy el nuevo texto con innerHTML'
@@ -105,47 +106,64 @@
 
 // ---- Acceso a los atributos del DOM
 
-let elemento = document.createElement('div'),
-    classDiv = 'box',
-    padre = document.getElementById('contenedor'),
-    ref = document.getElementsByTagName('div')[0];
+// let elemento = document.createElement('div'),
+//     classDiv = 'box',
+//     padre = document.getElementById('contenedor'),
+//     ref = document.getElementsByTagName('div')[0];
 
-padre.insertBefore(elemento, ref)
-elemento.setAttribute("class", "box");
+// padre.insertBefore(elemento, ref)
+// elemento.setAttribute("class", "box");
 
-//elemento.className = classDiv; // agregar clases a un elemento.
+// //elemento.className = classDiv; // agregar clases a un elemento.
 
-let elementoDos = document.getElementsByTagName('div')[1]; 
+// let elementoDos = document.getElementsByTagName('div')[1]; 
 
-elementoDos.setAttribute("class", "rojo");
-
-
-let elementoTres = document.getElementsByTagName('div')[2];
-
-elementoTres.setAttribute("class", "azul");
+// elementoDos.setAttribute("class", "rojo");
 
 
-// ---- Cambiando atributos accediendo al elemento directamente
+// let elementoTres = document.getElementsByTagName('div')[2];
 
-// syntax = elemento.id = "nuevoID";
-
-elementoTres.id = "idTres"
-
-// clases
-elementoTres.className = "azul claseTres" // agregar 2 clases al mismo elemento
-// respeta los espacios para añadir las clases que queramos
+// elementoTres.setAttribute("class", "azul");
 
 
-let linkUno = document.getElementById('enlace');
-console.log(linkUno.id) // podemos acceder al id de un elemento
+// // ---- Cambiando atributos accediendo al elemento directamente
 
-//console.log(linkUno.href); // acceder a valores de atributos
+// // syntax = elemento.id = "nuevoID";
 
-linkUno.href = "www.instagram.com" // cambiar el valor de atributos
+// elementoTres.id = "idTres"
 
-console.log(linkUno.href)
+// // clases
+// elementoTres.className = "azul claseTres" // agregar 2 clases al mismo elemento
+// // respeta los espacios para añadir las clases que queramos
 
 
+// let linkUno = document.getElementById('enlace');
+// console.log(linkUno.id) // podemos acceder al id de un elemento
+
+// //console.log(linkUno.href); // acceder a valores de atributos
+
+// linkUno.href = "www.instagram.com" // cambiar el valor de atributos
+
+// console.log(linkUno.href)
 
 
-// ********--------------- continuar https://www.youtube.com/watch?v=m5-UD2hJPtM
+// ------------------------------------------------------------
+
+// --- Modificando el estilo de los elementos
+
+
+let encabezado = document.getElementById('encabezado');
+//opción 1.
+encabezado.className = "titulo";
+
+//opción 2.
+encabezado.style.color = "red";
+encabezado.style.backgroundColor = "blue";
+encabezado.style.fontFamily = "Arial"
+// estos estilos los obtenemos en el atributo style de la etiqueta
+// seleccionada en este caso el h1 con id="encabezado"
+
+
+// -- remplazar clases
+encabezado.className = encabezado.className.replace("titulo", "tituloGrande")
+// .replace("elemento para agregar", "elemento para remplazar")
