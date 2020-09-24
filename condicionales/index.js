@@ -62,17 +62,17 @@ if (eleccion === 'soleado' && temperatura < 86) {
 
 switch (expresion) {
   case choice1:
-    ejecuta este código
+    //ejecuta este código
     break;
 
   case choice2:
-    ejecuta este código
+    //ejecuta este código
     break;
     
   // Se pueden incluir todos los casos que quieras
 
   default:
-    por si acaso, corre este código
+    //por si no se cumple ningún caso, corre este código
 }
 
 
